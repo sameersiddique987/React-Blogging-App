@@ -1,4 +1,6 @@
 
+import app from "./firebaseconfig";
+
 import {
     getAuth,
     createUserWithEmailAndPassword,
