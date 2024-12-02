@@ -1,7 +1,7 @@
 import React from 'react'
 import { useForm } from 'react-hook-form';
 import {  loginUser } from '../firebase/firebaseMethords';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 function Login() {
@@ -56,7 +56,8 @@ function Login() {
 
   <button type="submit" className="text-white  bg-gradient-to-r from-lime-200 bg-[#4ade80] hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 dark:focus:ring-lime-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Login</button>
  <br />
-<a href="./Signup">Please Register First!</a>
+
+ <Link to="/Signup">Please Register First!</Link>
 </form>
 </div>
     </div>
