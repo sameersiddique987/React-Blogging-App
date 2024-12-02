@@ -23,7 +23,7 @@ function Login() {
         password : data.password
       })
       console.log(userData);
-      navigate("/")
+      navigate("/Signup")
     } catch (error) {
       console.log(error);
       
