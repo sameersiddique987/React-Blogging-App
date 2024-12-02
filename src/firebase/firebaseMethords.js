@@ -6,7 +6,7 @@ import {
     signInWithEmailAndPassword,
     signOut,
   } from "firebase/auth";
-  import app from "./firebaseconfig";
+  import app from "./firebaseConfig.js"
   import {
     getFirestore,
     collection,
