@@ -9,7 +9,6 @@ const Navbar = () => {
   let navigate = useNavigate();
   const currentPage = useLocation();
   const [Data, setData] = useState([]);
-  
 
   // Logout user
   const userLogout = () => {
@@ -21,12 +20,9 @@ const Navbar = () => {
       confirmButtonColor: "#234e94",
     });
     signOutUser();
-     setData([]);
+    setData([]);
     navigate("/login");
   };
-
-  
-
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
@@ -34,13 +30,13 @@ const Navbar = () => {
         try {
           const q = query(collection(db, "users"), where("id", "==", user.uid));
           const querySnapshot = await getDocs(q);
-          const userDataArray = []; // Temporary array to store user data
-  
+          const userDataArray = []; 
+
           querySnapshot.forEach((doc) => {
-            // console.log(doc.data());
+        
             userDataArray.push(doc.data());
           });
-        
+
           // Update Data state
           if (userDataArray.length > 0) {
             setData(userDataArray);
@@ -51,11 +47,11 @@ const Navbar = () => {
         }
       }
     });
-    return () => unsubscribe(); // Clean up subscription
+    return () => unsubscribe(); 
   }, []);
   return (
     <nav className="navbar bg-blue-700 text-white px-4 shadow-lg">
-      {/* Left Section: Branding */}
+      
       <div className="flex items-center">
         <a className="text-xl font-bold cursor-pointer">Blogging App</a>
       </div>
