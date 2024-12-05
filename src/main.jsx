@@ -11,8 +11,6 @@ import ProtectedRouts from './conponents/ProtectedRouts.jsx'
 import Profile from './pages/Profile.jsx'
 import AllBlogs from './pages/AllBlogs.jsx'
 
-
-
 const router = createBrowserRouter ([
   {
     path : "/",
@@ -46,9 +44,6 @@ const router = createBrowserRouter ([
     ]
   }
 ])
-
-
-
 
 createRoot(document.getElementById('root')).render(
   <RouterProvider router ={router}>

@@ -6,14 +6,13 @@ import Swal from "sweetalert2";
 
 function Login() {
   const navigate = useNavigate();
-
   const {
     register,
     handleSubmit,
     watch,
     formState: { errors },
-  } = useForm();
-
+  } = useForm()
+  
   const formValue = async (data) => {
     console.log(data);
 
@@ -35,7 +34,6 @@ function Login() {
       console.log(error);
     }
   };
-
   return (
     <div>
       <div>

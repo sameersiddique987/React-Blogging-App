@@ -1,14 +1,9 @@
-
-
 import { onAuthStateChanged } from "firebase/auth";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { auth, db } from "../firebase/firebaseMethords";
 
-
 const Profile = () => {
-
-
   const [blogData, setBlogData] = useState([]);
   useEffect(() => {
     onAuthStateChanged(auth, async (user) => {
@@ -21,14 +16,12 @@ const Profile = () => {
                 setBlogData(doc.data())
             });
             console.log(user);
-
         } catch (error) {
             console.log(error);
         }
     } else {
         console.log('user logout ho giya ha');
     }
-      
     })
   }, [])
   return (
@@ -51,8 +44,6 @@ const Profile = () => {
     </div>
   </div>
 </>
-
-
   )
 }
 
